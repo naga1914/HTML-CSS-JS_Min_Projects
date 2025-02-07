@@ -1,18 +1,22 @@
 // varables
-const model=document.querySelector(".modal"),
-      btn=document.querySelector(".btn"),
-      close=document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.querySelector(".modal"),
+        btn = document.querySelector(".btn"),
+        close = document.querySelector(".close");
 
-btn.addEventListener("click",openModal);
-close.addEventListener("click",closeModal);
-model.addEventListener("click",closeModal);
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "block";
+    });
 
-//open modal
-function openModal(e){
-    e.preventDefault();
-    model.style.display ="block";
-}
-//close modal
-function closeModal(){
-    model.style.display ="none";
-}
+    close.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
