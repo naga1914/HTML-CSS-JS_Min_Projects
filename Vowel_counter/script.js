@@ -14,6 +14,6 @@ function countVowel(){
           vowelCount++;
         }
     }
-    result.innerHTML=`${word.value.toUpperCase()} hsa ${vowelCount} vowels`;
+    result.innerHTML=`${word.value.toUpperCase()} has ${vowelCount} vowels`;
 }
 

@@ -16,6 +16,7 @@ input{
     outline: none;
     padding: 1rem 5px;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 button{
